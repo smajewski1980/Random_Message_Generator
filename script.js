@@ -6,4 +6,19 @@ const quotes = [
     "When you change your thoughts, remember to also change your world.—Norman Vincent Peale",
     "It is only when we take chances, when our lives improve. The initial and the most difficult risk that we need to take is to become honest. —Walter Anderson",
     "Nature has given us all the pieces required to achieve exceptional wellness and health, but has left it to us to put these pieces together.—Diane McLaren"
-]
+];
+const foods = ["chicken", "steak", "fish", "lasagna", "spaghetti", "soup and salad", "nothing, go hungry..."];
+
+// Function to return a random number up to the
+// number provided as a parameter
+
+const randomNum = (num) => {
+    return Math.ceil(Math.random() * num)
+}
+
+// Creating the appropriate length random nunmbers
+
+const quoteNum = randomNum(7);
+const FoodNum = randomNum(7);
+const luckyNum = randomNum(1000000000);
+
