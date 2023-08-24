@@ -13,12 +13,17 @@ const foods = ["chicken", "steak", "fish", "lasagna", "spaghetti", "soup and sal
 // number provided as a parameter
 
 const randomNum = (num) => {
-    return Math.ceil(Math.random() * num)
+    return Math.floor(Math.random() * num)
 }
 
 // Creating the appropriate length random nunmbers
 
-const quoteNum = randomNum(7);
-const FoodNum = randomNum(7);
+const quoteIndex = randomNum(7);
+const foodIndex = randomNum(7);
 const luckyNum = randomNum(1000000000);
 
+// Getting a random item from each array
+const randomQuote = quotes[quoteIndex];
+const randomFood = foods[foodIndex];
+
+// The main function that will log the full messages
