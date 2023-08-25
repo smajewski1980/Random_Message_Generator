@@ -16,28 +16,17 @@ const randomNum = (num) => {
     return Math.floor(Math.random() * num)
 }
 
-// Creating the appropriate length random nunmbers
+// Creating the appropriate length random numbers
 
 const quoteIndex = randomNum(7);
 const foodIndex = randomNum(7);
 const luckyNum = randomNum(1000000000000000);
 
-// Getting a random item from each array
+// Getting a random item from both array
 const randomQuote = quotes[quoteIndex];
 const randomFood = foods[foodIndex];
 
-// The main function that will log the full messages
-
-const readline = require('readline').createInterface({
-    input: process.stdin,
-    output: process.stdout,
-  });
- let userName = ''; 
-  readline.question(`\nWhat's your name?`, name => {
-    userName = name;
-    randomMsgs();
-    readline.close();
-  });
+// The main function that will log the full message
 
 const randomMsgs = () => {
     console.log(`
@@ -51,4 +40,15 @@ And by the way, your lucky number is ${luckyNum}.
     `)
 }
 
-//randomMsgs();
+// Ask the user for their name and run random message function.
+
+const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout,
+});
+let userName = ''; 
+readline.question(`\nWhat's your name?`, name => {
+    userName = name;
+    randomMsgs();
+    readline.close();
+});
