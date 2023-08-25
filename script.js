@@ -9,8 +9,8 @@ const quotes = [
 ];
 const foods = ["chicken", "steak", "fish", "lasagna", "spaghetti", "soup and salad", "nothing, go hungry..."];
 
-// Function to return a random number up to the
-// number provided as a parameter
+// Function to return a random number
+// num is the number of items in the arrays
 
 const randomNum = (num) => {
     return Math.floor(Math.random() * num)
@@ -20,9 +20,9 @@ const randomNum = (num) => {
 
 const quoteIndex = randomNum(7);
 const foodIndex = randomNum(7);
-const luckyNum = randomNum(1000000000000000);
+const luckyNum = randomNum(1000000000000000);  //obnoxiously long to be silly
 
-// Getting a random item from both array
+// Getting a random item from both arrays
 const randomQuote = quotes[quoteIndex];
 const randomFood = foods[foodIndex];
 
