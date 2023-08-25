@@ -18,8 +18,8 @@ const randomNum = (num) => {
 
 // Creating the appropriate length random numbers
 
-const quoteIndex = randomNum(7);
-const foodIndex = randomNum(7);
+const quoteIndex = randomNum(quotes.length);
+const foodIndex = randomNum(foods.length);
 const luckyNum = randomNum(1000000000000000);  //obnoxiously long to be silly
 
 // Getting a random item from both arrays
