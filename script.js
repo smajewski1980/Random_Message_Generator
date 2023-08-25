@@ -28,9 +28,20 @@ const randomFood = foods[foodIndex];
 
 // The main function that will log the full messages
 
+const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  });
+ let userName = ''; 
+  readline.question(`\nWhat's your name?`, name => {
+    userName = name;
+    randomMsgs();
+    readline.close();
+  });
+
 const randomMsgs = () => {
     console.log(`
-Here's a quote for you:
+Hi ${userName}, here's a quote for you:
 
     ${randomQuote}
 
@@ -40,4 +51,4 @@ And by the way, your lucky number is ${luckyNum}.
     `)
 }
 
-randomMsgs();
+//randomMsgs();
